@@ -45,6 +45,17 @@ class StudentController {
   }
 
   async update(req, res) {
+    const schema = Yup.object().shape({
+      name: Yup.string(),
+      email: Yup.string().email(),
+      age: Yup.number().integer(),
+      height: Yup.number().integer(),
+      weight: Yup.number().integer(),
+    });
+
+    if (!(await schema.isValid(req.body)))
+      return res.status(400).json({ error: 'Validation fails' });
+
     const user = await User.findByPk(req.userId);
 
     if (!user.admin) return res.status(401).json({ error: 'Only admin users' });
