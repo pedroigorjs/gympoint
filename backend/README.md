@@ -5,13 +5,7 @@ A web and mobile app to management gyms with React.js, React Native and Node.js
 
 Use the Node.js package manager [yarn](https://github.com/yarnpkg/yarn) or [npm](https://github.com/npm/cli).
 
-Enter in the folder using:
-
-```bash
-cd backend
-```
-
-After install the packages:
+In project directory run:
 
 ```bash
 yarn
