@@ -31,5 +31,6 @@ module.exports = {
       }
     ],
     'no-param-reassign': 'off',
+    'import/prefer-default-export': 'off'
   },
 };
